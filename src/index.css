@@ -1,0 +1,387 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .list-elements {
+        @apply pt-4 transition ease-in duration-500 hover:underline
+    }
+
+    .dropImages {
+        @apply w-5 object-contain
+    }
+
+    .nav-Button {
+        @apply focus:outline-offset-2 focus:outline-2 focus:outline-slate-900
+    }
+}
+
+:root {
+    --padding: 1.5rem;
+    --padding2: 1rem 0;
+    --padding3: 2rem 0;
+    --color: #fff;
+    --color2: #000;
+    --bgColor: transparent;
+    --fontWeight: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1120px;
+    margin: 0 auto;
+
+}
+
+/* navigation */
+/* #dropDown:hover{
+    background-color: goldenrod !important;
+    /* border:  4px solid red 
+} */
+
+/* SLIDERS */
+.overall-slider-wrapper {
+    width: 97vw;
+    margin: 2rem auto;
+    max-width: 1300px;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 490%;
+    margin: 0 auto;
+    display: flex;
+    gap: 7px;
+    min-height: auto;
+}
+
+.slides {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 1000ms ease-in;
+}
+
+.slider-img {
+    max-width: 100%;
+    min-height: 100vh;
+    object-fit: inherit;
+}
+
+/* goals and progress*/
+.goal-img,
+.job-img {
+    max-width: 100%;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#goal-section {
+    padding: 2rem 0;
+}
+
+#goal-section h2,
+#featured h2,
+#cards-section h3 {
+    text-transform: capitalize;
+    font-size: 2rem;
+    text-align: center;
+    padding: var(--padding3);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.goal-card,
+.job-card {
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: var(--color);
+}
+
+.inner-goal-card,
+.job-card {
+    padding: var(--padding);
+}
+
+.goal-title,
+.job-title {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.goal-info,
+.job-info {
+    padding: var(--padding2);
+    line-height: 25px;
+}
+
+.goal-card button {
+    background-color: transparent;
+    border: 0;
+    font-weight: var(--fontWeight);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.button{
+display: flex;
+align-items: center;
+}
+
+.button span {
+    font-weight: var(--fontWeight);
+    font-size: 1.5rem;
+    padding: 0 .5rem;
+}
+
+/* hover states for buttons */
+.button:hover,
+.jobs-button:hover,
+#view:hover {
+    opacity: 0.5;
+}
+
+.carouselWrapper {
+    width: 95vw;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: .2rem;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 1rem;
+    width: 255%;
+    padding: 1rem 0;
+}
+
+#carousel-inner {
+    transition: 400ms ease-in;
+}
+
+.carousel .goal-card {
+    width: 90vw;
+    height: 100%;
+}
+
+.carousel .goal-img {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* absolute positions for jobs */
+.jobs-container {
+    position: relative;
+    margin-top: 16rem;
+}
+
+.jobs-button {
+    background-color: var(--bgColor);
+    width: 100%;
+    text-align: center;
+    border: 2px solid var(--color2);
+    border-radius: 25px;
+    padding: .5rem;
+    font-weight: var(--fontWeight);
+}
+
+.job-card {
+    position: absolute;
+    width: 90%;
+    max-width: 650px;
+    right: 50%;
+    left: 50%;
+    top: 2rem;
+    transform: translate(-50%, -50%);
+}
+
+.job-img {
+    border-radius: 0;
+}
+
+#cards-section {
+    padding: .9rem .9rem 4rem;
+}
+
+.gridWrapper {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1.5rem;
+}
+
+.cardItem {
+    background-color: var(--color);
+    border-radius: 7px;
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+    transition: 400ms ease-in;
+}
+
+.cardItem:hover {
+    transform: scale(1.05);
+}
+
+.cardItem img {
+    width: 100%;
+    display: block;
+    border-radius: 7px;
+}
+
+#view {
+    display: block;
+    width: 100%;
+    margin: auto;
+    background-color: transparent;
+    border-radius: 25px;
+    padding: .4rem;
+    text-transform: capitalize;
+    font-weight: var(--fontWeight);
+    border: 2px solid var(--color2);
+    transition: 400ms ease-in;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.controls>.active-Button {
+    background-color: var(--color2);
+}
+
+.controls button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--color2);
+    border-radius: 50px;
+    background-color: var(--bgColor);
+}
+
+.desktop .socials {
+    display: none;
+}
+.socials > a{
+    transition: 400ms ease-out;
+}
+.socials>a:hover {
+    opacity: 0.5;
+}
+
+@media only screen and (min-width:912px) {
+    .container {
+        width: 80%;
+        max-width: 1000px;
+    }
+
+    /* CAROUSEL */
+    .carouselWrapper {
+        max-width: 80vw;
+    }
+
+    .carousel {
+        width: 159%;
+    }
+
+    .carousel .goal-card {
+        width: 25vw;
+    }
+
+    .jobs-container {
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 11rem;
+    }
+
+    .job-grid {
+        width: 80%;
+        max-width: 1000px;
+        margin: 0 auto;
+        align-items: center;
+    }
+
+    .img-container {
+        width: 53%;
+    }
+
+    .job-img {
+        border-radius: 10px;
+    }
+
+    .job-card {
+        position: absolute;
+        top: -53%;
+        transform: translate(-90%, 50%);
+        height: 430px;
+        width: 51%;
+    }
+
+    .jobs-container:nth-of-type(2) {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .jobs-container:nth-of-type(1) .job-card {
+        left: 46%;
+    }
+
+    .jobs-container:nth-of-type(2) .job-card {
+        left: 95%;
+    }
+
+    .gridWrapper {
+        max-width: 700px;
+    }
+
+    #view {
+        width: 350px;
+    }
+
+    .jobs-container button {
+        display: inline-block;
+        width: 50%;
+        margin-top: 2.5rem;
+    }
+
+    .desktop .socials {
+        display:  flex;
+    }
+
+    .mobileSocials .socials {
+        display: none;
+    }
+}
+
+@media only screen and (min-width:912px)and (max-width:1024px) {
+    .jobs-container {
+        margin-top: 8rem;
+    }
+
+    .job-card {
+        top: -70%;
+    }
+
+    .jobs-container button {
+        margin-top: 1rem;
+    }
+    
+}
