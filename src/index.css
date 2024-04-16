@@ -383,5 +383,7 @@ align-items: center;
     .jobs-container button {
         margin-top: 1rem;
     }
-    
+    .weather{
+        border-radius: 2px solid red;
+    }
 }
