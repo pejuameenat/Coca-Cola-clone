@@ -11,11 +11,12 @@ import cokeCard5 from './assets/cokeCard5.webp'
 import cokeCard6 from './assets/cokeCard6.webp'
 import cokeCard7 from './assets/cokeCard7.webp'
 import cokeCard8 from './assets/cokeCard8.webp'
-import img1 from './assets/cokeSlider2.jpg'
-import img2 from './assets/cokeSlider4.jpg'
-import img3 from './assets/cokeSlider1.jpg'
-import img4 from './assets/cokeSlider3.jpg'
-import img5 from './assets/cokeSlider56.jpg'
+import img1 from './assets/cokeItem(nc).jpg'
+import img2 from './assets/cokeSlider2.jpg'
+import img3 from './assets/cokeSlider4.jpg'
+import img4 from './assets/cokeSlider1.jpg'
+import img5 from './assets/cokeSlider3.jpg'
+import img6 from './assets/cokeSlider56.jpg'
 import feature1 from './assets/cokeTears.webp'
 import feature2 from './assets/chico.webp'
 import feature3 from './assets/jackDaniels.webp'
@@ -77,6 +78,7 @@ export const slides = [
   { id: 2, img: img3 },
   { id: 3, img: img4 },
   { id: 4, img: img5 },
+  { id: 5, img: img6 },
 ]
 
 export const featured = [
