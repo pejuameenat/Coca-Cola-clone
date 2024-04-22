@@ -6,19 +6,21 @@ import Jobs from './Jobs'
 import Cards from './Cards'
 import Carousel from './Carousel'
 import Footer from './Footer'
-import { slides, featured } from '../data'
+import { slides, featured, navLists } from '../data'
 function App() {
   const [slider, setSlider] = useState(slides)
   const [feature, setFeature] = useState(featured)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [currentElement, setCurrentElement] = useState(0)
   const [showDropDown, setShowDropDown] = useState(false)
+   const [navigation, setNavigation] = useState(navLists)
 
   function handleControlsClick(id) {
     setCurrentIndex(id)
   }
 
   function handleDropDown(i) {
+    if (i === navigation.length - 1) return null
     setCurrentElement(i)
     setShowDropDown(true)
   }
@@ -36,6 +38,7 @@ function App() {
         showDropDown={showDropDown}
         currentElement={currentElement}
         handleMobileDropDown={handleMobileDropDown}
+        navigation={navigation}
       />
       <Slider
         slider={slider}

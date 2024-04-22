@@ -3,7 +3,6 @@ import img1 from '../assets/the-coca-cola-company-logo-0.svg'
 import menu from '../assets/menu.png'
 import MobileNav from './MobileNav'
 import DesktopNav from './DesktopNav'
-import { navLists } from '../data'
 
 const Nav = ({
   handleDropDown,
@@ -11,8 +10,8 @@ const Nav = ({
   showDropDown,
   currentElement,
   handleMobileDropDown,
+  navigation,
 }) => {
-  const [navigation, setNavigation] = useState(navLists)
   const [isOpen, setIsOpen] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
 
@@ -20,13 +19,13 @@ const Nav = ({
     setWindowWidth(window.innerWidth)
     if (windowWidth < 992) {
       setIsOpen((prevOpen) => !prevOpen)
-    }else{
+    } else {
       setIsOpen(false)
     }
   }
-  useEffect(()=>{
-     window.addEventListener('resize', isNavOpen)
-     return ()=> window.removeEventListener('resize', isNavOpen)
+  useEffect(() => {
+    window.addEventListener('resize', isNavOpen)
+    return () => window.removeEventListener('resize', isNavOpen)
   }, [windowWidth])
 
   return (
